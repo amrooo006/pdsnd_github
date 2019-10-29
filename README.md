@@ -18,3 +18,4 @@ i use python to access data that is related to us Bikeshare systems includes thr
 3- peers experience
 4- slack platform
 5- Learn Python In Hard Way book
+6- geekforgeek.com
