@@ -15,6 +15,6 @@ i use python to access data that is related to us Bikeshare systems includes thr
 ### Credits
 1- Udacity course
 2- GitHub
-3- peer experience
+3- peers experience
 4- slack platform
 5- Learn Python In Hard Way book
