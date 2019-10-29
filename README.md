@@ -1,7 +1,7 @@
 ### Date created
-10-27-2019
+Oct 27, 2019
 ### Project Title
-Explore US Bikeshare data
+Explore US Bikeshare Data
 
 ### Description
 i use python to access data that is related to us Bikeshare systems includes three cities  that are Chicago , New York City , and Washington in U.S.A. i will use script to import data based on user questions that are already limited and answer them appropriately.
