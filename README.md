@@ -7,10 +7,10 @@ Explore US Bikeshare Data
 i use python to access data that is related to us Bikeshare systems includes three cities  that are Chicago , New York City , and Washington in U.S.A. i will use script to import data based on user questions that are already limited and answer them appropriately.
 
 ### Files used
-1-  new_york_city.csv
-2-  chicago.csv
-3-  washington.csv
-4-  bikeshare.py
+1- new_york_city.csv
+2- chicago.csv
+3- washington.csv
+4- bikeshare.py
 
 ### Credits
 1- Udacity course
