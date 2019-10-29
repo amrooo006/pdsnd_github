@@ -52,7 +52,7 @@ def get_filters():
         else:
             print("\nPlease choose a day name from the above list!\n"
                   "\nLet's try again!")
-        
+
 
     print('-'*40)
     return city, month, day
@@ -73,14 +73,14 @@ def load_data(city, month, day):
     df['Start Time']=pd.to_datetime(df['Start Time'])
     df['Month']= df['Start Time'].dt.month
     df['Week_Day'] = df['Start Time'].dt.weekday_name
-    
+
     if month != 'all':
         month = MONTHS.index(month)
         df = df[df['Month'] == month]
-        
+
     if day != 'all':
         df = df[df['Week_Day'] == day.title()]
-        
+
     return df
 
 
@@ -94,8 +94,8 @@ def time_stats(df):
     the_most_common_month = df['Month'].mode()[0]
     print('The most common month: \n',
           MONTHS[the_most_common_month].title())
-         
-          
+
+
 
     # display the most common Week Day
     the_most_common_week_day = df['Week_Day'].mode()[0]
@@ -121,7 +121,7 @@ def station_stats(df):
     # display the most commonly used start station
     the_most_commonly_used_start_station = df['Start Station'].mode()[0]
     print('\nThe most commonly used start station: \n' , the_most_commonly_used_start_station)
-    
+
     # display the most commonly used end station
     the_most_commonly_used_end_station = df['End Station'].mode()[0]
     print('\nThe most commonly used end station: \n' , the_most_commonly_used_end_station)
@@ -130,7 +130,7 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
     df['Start_End'] = df['Start Station'].str.cat(df['End Station'], sep = ' To ')
     the_most_frequent_combination_of_start_to_end_trip = df['Start_End'].mode()[0]
-    
+
     print('\nThe most frequent combination of start to end trip: \n', the_most_frequent_combination_of_start_to_end_trip)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -147,7 +147,7 @@ def trip_duration_stats(df):
     print('Total Travel Time: \n',
           round(sum(df['Trip Duration']),2), 'sec or,\n',
           round(sum(df['Trip Duration'])/60,2), 'min or,\n',
-          round(sum(df['Trip Duration'])/3600,2), 'hr or,\n', 
+          round(sum(df['Trip Duration'])/3600,2), 'hr or,\n',
           round(sum(df['Trip Duration'])/86400,2), 'days.\n')
 
     # display mean travel time
@@ -178,17 +178,17 @@ def user_stats(df):
 
     # Display earliest, most recent, and most common year of birth
     print('\nYear of birth stats: \n')
-    try: 
+    try:
         print('\nThe earliest year of birth: \n', df['Birth Year'].min())
         print('\nThe most recent year of birth: \n', df['Birth Year'].max())
         print('\nThe most common year of birth: \n', df['Birth Year'].mode()[0])
-   
+
     except:
         print("No Birth Year data.")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
 def Display_Data(df):
     """Dis[lay more data of user"""
     for i in range(0, df.shape[0], 15):
